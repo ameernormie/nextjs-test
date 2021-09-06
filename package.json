@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "serve": " pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy"
   },
   "dependencies": {
     "next": "^11.0.0",

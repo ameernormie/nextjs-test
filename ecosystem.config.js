@@ -2,7 +2,8 @@ module.exports = {
 	apps: [
 	  {
 	    name: "NextApp",
-	    script: "dist/main.js",
+	    script: "npm",
+            args : "start",
 	    instances: 1,
 	    autorestart: true,
 	    watch: false,
@@ -13,16 +14,16 @@ module.exports = {
 	  development: {
 	    key: "~/.ssh/id_rsa",
 	    user: "webadm",
-	    host: "18.191.167.19",
-	    ref: "origin/master",
+	    host: "143.198.130.53",
+	    ref: "origin/main",
 	    ssh_options: "ForwardAgent=yes",
-	    repo: "git@github.com:nerdyfactory/ID-admin-API.git",
+	    repo: "git@github.com:ameernormie/nextjs-test.git",
 	    path: "/var/www/next-app",
 	    env: {
 	      NODE_ENV: "development",
 	    },
 	    "post-deploy":
-	      "yarn install && yarn typeorm migration:run && yarn build && yarn serve",
+	      "yarn install && yarn build && yarn serve",
 	  },
 	},
       };
