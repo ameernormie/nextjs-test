@@ -7,8 +7,13 @@ import Koa from "koa";
 import next from "next";
 import Router from "koa-router";
 
-dotenv.config();
-const port = parseInt(process.env.PORT || "3000", 10);;
+dotenv.config({
+  path: path.resolve(
+    process.cwd(),
+    `.env.${process.env.NODE_ENV || "development"}`
+  ),
+});
+const port = parseInt(process.env.PORT || "3000", 10);
 const dev = process.env.NODE_ENV !== "production";
 const app = next({
   dev,
