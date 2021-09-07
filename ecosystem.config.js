@@ -14,7 +14,7 @@ module.exports = {
     development: {
       key: "~/.ssh/id_rsa",
       user: "webadm",
-      host: "143.198.130.53",
+      host: "143.198.140.113",
       ref: "origin/main",
       ssh_options: "ForwardAgent=yes",
       repo: "git@github.com:ameernormie/nextjs-test.git",
