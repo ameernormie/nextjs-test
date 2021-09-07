@@ -5,9 +5,8 @@
   "scripts": {
     "test": "jest",
     "dev": "cross-env NODE_ENV=development nodemon ./server/index.js --watch ./server/index.js",
-    "build": "NODE_ENV=development NEXT_TELEMETRY_DISABLED=1 next build",
-    "start": "cross-env NODE_ENV=development node ./server/index.js",
-    "export": "next build && next export",
+    "build": "next build",
+    "start": "node ./server/index.js",
     "deploy": "pm2 deploy",
     "serve": "pm2 startOrRestart ecosystem.config.js"
   },
