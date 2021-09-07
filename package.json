@@ -5,8 +5,9 @@
   "scripts": {
     "test": "jest",
     "dev": "cross-env NODE_ENV=development nodemon ./server/index.js --watch ./server/index.js",
-    "build": "next build",
-    "start": "next start",
+    "build": "NODE_ENV=development NEXT_TELEMETRY_DISABLED=1 next build",
+    "start": "cross-env NODE_ENV=development node ./server/index.js",
+    "export": "next build && next export",
     "deploy": "pm2 deploy",
     "serve": "pm2 startOrRestart ecosystem.config.js"
   },
@@ -54,8 +55,8 @@
     "jest": "26.6.3",
     "lint-staged": "^10.5.3",
     "nodemon": "^2.0.0",
-    "prettier": "2.2.1",
     "pm2": "^5.1.1",
+    "prettier": "2.2.1",
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.14.0"
   }
