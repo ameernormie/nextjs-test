@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "NextApp",
-      script: "yarn",
+      script: "/usr/bin/yarn",
       args: "start",
       instances: 1,
       autorestart: true,
