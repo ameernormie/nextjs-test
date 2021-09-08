@@ -6,7 +6,7 @@
     "test": "jest",
     "dev": "cross-env NODE_ENV=development nodemon ./server/index.js --watch ./server/index.js",
     "build": "next build",
-    "start": "node ./server/index.js",
+    "start": "next start",
     "deploy": "pm2 deploy",
     "serve": "pm2 startOrRestart ecosystem.config.js"
   },
