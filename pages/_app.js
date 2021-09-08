@@ -58,14 +58,10 @@ function MyProvider(props) {
 
 class MyApp extends App {
   render() {
-    const {
-      Component,
-      pageProps,
-      //  host
-    } = this.props;
+    const { Component, pageProps, host } = this.props;
     // const host = window.btoa("https://booleantech.blog/admin");
     // const host = Buffer.from("https://booleantech.blog").toString("base64");
-    const host = "Ym9vbGVhbnRlY2guYmxvZy9hZG1pbg==";
+    // const host = "Ym9vbGVhbnRlY2guYmxvZy9hZG1pbg==";
     console.log("host ", host);
     return (
       <AppProvider i18n={translations}>

@@ -6,7 +6,7 @@
     "test": "jest",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node ./server/index.js",
     "deploy": "pm2 deploy",
     "serve": "pm2 startOrRestart ecosystem.config.js"
   },
