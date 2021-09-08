@@ -98,10 +98,11 @@ app.prepare().then(async () => {
   router.get("/_next/webpack-hmr", handleRequest); // Webpack content is clear
   router.get("(.*)", async (ctx) => {
     const shop = ctx.query.shop;
+    const host = ctx.query.host;
 
     // This shop hasn't been seen yet, go through OAuth to create a session
     if (ACTIVE_SHOPIFY_SHOPS[shop] === undefined) {
-      ctx.redirect(`/auth?shop=${shop}`);
+      ctx.redirect(`/auth?shop=${shop}&host=${host}`);
     } else {
       await handleRequest(ctx);
     }

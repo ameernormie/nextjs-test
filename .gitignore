@@ -21,4 +21,5 @@ config/tunnel.pid
 .next/
 out/
 .env.development
+.env.production
 package-lock.json

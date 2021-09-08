@@ -19,9 +19,9 @@ module.exports = {
       ssh_options: "ForwardAgent=yes",
       repo: "git@github.com:ameernormie/nextjs-test.git",
       path: "/var/www/next-app",
-      env: {
-        NODE_ENV: "development",
-      },
+      // env: {
+      //   NODE_ENV: "development",
+      // },
       "post-deploy": "yarn install && yarn build && yarn serve",
     },
   },
