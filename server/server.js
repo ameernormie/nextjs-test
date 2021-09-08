@@ -1,19 +1,19 @@
 import "@babel/polyfill";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import "isomorphic-fetch";
 import createShopifyAuth, { verifyRequest } from "@shopify/koa-shopify-auth";
 import Shopify, { ApiVersion } from "@shopify/shopify-api";
 import Koa from "koa";
 import next from "next";
 import Router from "koa-router";
-import path from "path";
+// import path from "path";
 
-dotenv.config({
-  path: path.resolve(
-    process.cwd(),
-    `.env.${process.env.NODE_ENV || "development"}`
-  ),
-});
+// dotenv.config({
+//   path: path.resolve(
+//     process.cwd(),
+//     `.env.${process.env.NODE_ENV || "development"}`
+//   ),
+// });
 
 console.log("process.env.HOST ", process.env.HOST);
 const port = parseInt(process.env.PORT || "3000", 10);
