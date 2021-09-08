@@ -5,7 +5,12 @@ import { authenticatedFetch } from "@shopify/app-bridge-utils";
 import { Redirect } from "@shopify/app-bridge/actions";
 import "@shopify/polaris/dist/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
-import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
 
 function userLoggedInFetch(app) {
   const fetchFunction = authenticatedFetch(app);
@@ -35,12 +40,12 @@ function MyProvider(props) {
   const client = new ApolloClient({
     cache: new InMemoryCache(),
     link: createHttpLink({
-      credentials: 'include',
+      credentials: "include",
       headers: {
-        "Content-Type": "application/graphql"
+        "Content-Type": "application/graphql",
       },
-      fetch: userLoggedInFetch(app)
-    })
+      fetch: userLoggedInFetch(app),
+    }),
   });
   const Component = props.Component;
 
@@ -53,7 +58,15 @@ function MyProvider(props) {
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps, host } = this.props;
+    const {
+      Component,
+      pageProps,
+      //  host
+    } = this.props;
+    // const host = window.btoa("https://booleantech.blog/admin");
+    // const host = Buffer.from("https://booleantech.blog").toString("base64");
+    const host = "Ym9vbGVhbnRlY2guYmxvZy9hZG1pbg==";
+    console.log("host ", host);
     return (
       <AppProvider i18n={translations}>
         <Provider

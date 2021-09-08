@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "NextApp",
       script: "/usr/bin/yarn",
-      args: "start",
+      args: "dev",
       instances: 1,
       autorestart: true,
       watch: false,
