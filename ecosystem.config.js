@@ -11,7 +11,7 @@ module.exports = {
     },
   ],
   deploy: {
-    development: {
+    production: {
       key: "~/.ssh/id_rsa",
       user: "webadm",
       host: "143.198.140.113",
